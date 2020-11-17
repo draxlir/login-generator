@@ -20,5 +20,17 @@ public class TestLoginGenerator {
         assertEquals("John Ralling added",
                 generator.generateLoginForNomAndPrenom("Ralling","John"),"JRAL1");
     }
+    @Test
+    public void CT3(){
+        LoginGenerator generator = new LoginGenerator(loginService);
+        assertEquals("Jean Rolling added",
+                generator.generateLoginForNomAndPrenom("Rolling","Jean"),"JROL1");
+    }
+    @Test
+    public void CT4(){
+        LoginGenerator generator = new LoginGenerator(loginService);
+        assertEquals("Paul dùran added",
+                generator.generateLoginForNomAndPrenom("Dùran","Paul"),"PDUR");
+    }
 
 }
