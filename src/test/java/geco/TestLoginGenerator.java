@@ -32,5 +32,11 @@ public class TestLoginGenerator {
         assertEquals("Paul dùran added",
                 generator.generateLoginForNomAndPrenom("Dùran","Paul"),"PDUR");
     }
+    @Test
+    public void CT(){
+        LoginGenerator generator = new LoginGenerator(loginService);
+        assertEquals("Paul du added",
+                generator.generateLoginForNomAndPrenom("Du","Paul"),"PDU");
+    }
 
 }
